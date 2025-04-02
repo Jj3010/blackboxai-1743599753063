@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitLife - Your Health Companion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .hero-bg {
+            background-image: url('https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav class="bg-gray-800 text-white p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold">FitLife</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-yellow-400">Home</a>
+                <a href="workouts.html" class="hover:text-yellow-400">Workouts</a>
+                <a href="meals.html" class="hover:text-yellow-400">Meal Plans</a>
+                <a href="recipes.html" class="hover:text-yellow-400">Recipes</a>
+                <a href="ebook.html" class="hover:text-yellow-400">E-Book</a>
+            </div>
+            <button class="md:hidden">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg h-screen flex items-center justify-center text-white relative">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="text-center z-10 px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Transform Your Health</h1>
+            <p class="text-xl mb-8">Simple workouts and meal plans for busy people</p>
+            <div class="space-x-4">
+                <a href="workouts.html" class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-6 rounded-full inline-block transition duration-300">Get Started</a>
+                <a href="ebook.html" class="bg-transparent hover:bg-white hover:text-black border-2 border-white text-white font-bold py-3 px-6 rounded-full inline-block transition duration-300">Free E-Book</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Your Health Journey Starts Here</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Workout Card -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <img src="https://images.pexels.com/photos/1229356/pexels-photo-1229356.jpeg" alt="Workouts" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Workouts</h3>
+                        <p class="text-gray-600 mb-4">Effective exercises you can do anywhere, no equipment needed</p>
+                        <a href="workouts.html" class="text-yellow-500 font-semibold hover:underline">Explore Workouts →</a>
+                    </div>
+                </div>
+                
+                <!-- Meal Plan Card -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg" alt="Meal Plans" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Meal Plans</h3>
+                        <p class="text-gray-600 mb-4">Balanced meal plans tailored to your dietary preferences</p>
+                        <a href="meals.html" class="text-yellow-500 font-semibold hover:underline">View Meal Plans →</a>
+                    </div>
+                </div>
+                
+                <!-- Recipes Card -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <img src="https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg" alt="Recipes" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Recipes</h3>
+                        <p class="text-gray-600 mb-4">Simple, healthy recipes with common ingredients</p>
+                        <a href="recipes.html" class="text-yellow-500 font-semibold hover:underline">Find Recipes →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-2xl font-bold">FitLife</h3>
+                    <p class="text-gray-400">Your health companion</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 FitLife. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle functionality will be added here
+    </script>
+</body>
+</html>
