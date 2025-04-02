@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workouts - FitLife</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .workout-hero {
+            background-image: url('https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+        .difficulty-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Navigation (same as index.html) -->
+    <nav class="bg-gray-800 text-white p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold">FitLife</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-yellow-400">Home</a>
+                <a href="workouts.html" class="text-yellow-400">Workouts</a>
+                <a href="meals.html" class="hover:text-yellow-400">Meal Plans</a>
+                <a href="recipes.html" class="hover:text-yellow-400">Recipes</a>
+                <a href="ebook.html" class="hover:text-yellow-400">E-Book</a>
+            </div>
+            <button class="md:hidden">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Workout Hero Section -->
+    <section class="workout-hero h-64 flex items-center justify-center text-white relative">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="text-center z-10 px-4">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4">Workouts</h1>
+            <p class="text-lg">Exercises for all fitness levels</p>
+        </div>
+    </section>
+
+    <!-- Workout Filters -->
+    <section class="py-8 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="bg-yellow-500 text-black px-4 py-2 rounded-full font-medium">All</button>
+                <button class="bg-white hover:bg-gray-200 px-4 py-2 rounded-full font-medium">Strength</button>
+                <button class="bg-white hover:bg-gray-200 px-4 py-2 rounded-full font-medium">Cardio</button>
+                <button class="bg-white hover:bg-gray-200 px-4 py-2 rounded-full font-medium">Yoga</button>
+                <button class="bg-white hover:bg-gray-200 px-4 py-2 rounded-full font-medium">HIIT</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workout of the Day -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-6">Workout of the Day</h2>
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2">
+                        <img src="https://images.pexels.com/photos/2261477/pexels-photo-2261477.jpeg" alt="Full Body Workout" class="w-full h-full object-cover">
+                    </div>
+                    <div class="md:w-1/2 p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold">Full Body Burn</h3>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Beginner</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">A complete 20-minute workout targeting all major muscle groups.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-clock text-yellow-500 mr-2"></i>
+                                <span>Duration: 20 minutes</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-fire text-yellow-500 mr-2"></i>
+                                <span>Calories burned: ~200</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-dumbbell text-yellow-500 mr-2"></i>
+                                <span>Equipment: None</span>
+                            </li>
+                        </ul>
+                        <button class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-6 rounded-full transition duration-300">Start Workout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Workouts -->
+    <section class="py-12 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-6">All Workouts</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Workout 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden relative">
+                    <span class="difficulty-badge bg-green-100 text-green-800">Beginner</span>
+                    <img src="https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg" alt="Bodyweight Squats" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Bodyweight Squats</h3>
+                        <p class="text-gray-600 mb-4">Great for building lower body strength and endurance.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">Legs • 10 min</span>
+                            <button class="text-yellow-500 font-semibold hover:underline">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Workout 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden relative">
+                    <span class="difficulty-badge bg-yellow-100 text-yellow-800">Intermediate</span>
+                    <img src="https://images.pexels.com/photos/3768916/pexels-photo-3768916.jpeg" alt="Push-up Variations" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Push-up Variations</h3>
+                        <p class="text-gray-600 mb-4">Build upper body strength with these push-up variations.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">Upper Body • 15 min</span>
+                            <button class="text-yellow-500 font-semibold hover:underline">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Workout 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden relative">
+                    <span class="difficulty-badge bg-red-100 text-red-800">Advanced</span>
+                    <img src="https://images.pexels.com/photos/4662438/pexels-photo-4662438.jpeg" alt="HIIT Circuit" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">HIIT Circuit</h3>
+                        <p class="text-gray-600 mb-4">High intensity interval training for maximum calorie burn.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">Full Body • 20 min</span>
+                            <button class="text-yellow-500 font-semibold hover:underline">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Workout 4 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden relative">
+                    <span class="difficulty-badge bg-green-100 text-green-800">Beginner</span>
+                    <img src="https://images.pexels.com/photos/3823036/pexels-photo-3823036.jpeg" alt="Yoga Flow" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Morning Yoga Flow</h3>
+                        <p class="text-gray-600 mb-4">Gentle yoga sequence to start your day with energy.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">Flexibility • 25 min</span>
+                            <button class="text-yellow-500 font-semibold hover:underline">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Workout 5 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden relative">
+                    <span class="difficulty-badge bg-yellow-100 text-yellow-800">Intermediate</span>
+                    <img src="https://images.pexels.com/photos/903171/pexels-photo-903171.jpeg" alt="Core Workout" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Core Strengthening</h3>
+                        <p class="text-gray-600 mb-4">Exercises to build a strong, stable core.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">Core • 15 min</span>
+                            <button class="text-yellow-500 font-semibold hover:underline">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Workout 6 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden relative">
+                    <span class="difficulty-badge bg-red-100 text-red-800">Advanced</span>
+                    <img src="https://images.pexels.com/photos/17840/pexels-photo.jpg" alt="Tabata" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Tabata Training</h3>
+                        <p class="text-gray-600 mb-4">Short bursts of intense exercise with brief rest periods.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">Cardio • 16 min</span>
+                            <button class="text-yellow-500 font-semibold hover:underline">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-2xl font-bold">FitLife</h3>
+                    <p class="text-gray-400">Your health companion</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 FitLife. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Workout filter functionality will be added here
+        document.addEventListener('DOMContentLoaded', function() {
+            // Will implement filter logic in next iteration
+        });
+    </script>
+</body>
+</html>
