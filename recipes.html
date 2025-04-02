@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes - FitLife</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .recipe-hero {
+            background-image: url('https://images.pexels.com/photos/1640770/pexels-photo-1640770.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+        .recipe-card:hover .recipe-image {
+            transform: scale(1.05);
+        }
+        .shopping-list {
+            min-height: 200px;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav class="bg-gray-800 text-white p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold">FitLife</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-yellow-400">Home</a>
+                <a href="workouts.html" class="hover:text-yellow-400">Workouts</a>
+                <a href="meals.html" class="hover:text-yellow-400">Meal Plans</a>
+                <a href="recipes.html" class="text-yellow-400">Recipes</a>
+                <a href="ebook.html" class="hover:text-yellow-400">E-Book</a>
+            </div>
+            <button class="md:hidden">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Recipe Hero Section -->
+    <section class="recipe-hero h-64 flex items-center justify-center text-white relative">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="text-center z-10 px-4">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4">Recipes</h1>
+            <p class="text-lg">Healthy meals made simple</p>
+        </div>
+    </section>
+
+    <!-- Recipe Search -->
+    <section class="py-8 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto">
+                <div class="relative">
+                    <input type="text" placeholder="Search recipes..." class="w-full px-4 py-3 rounded-full border-0 focus:ring-2 focus:ring-yellow-500">
+                    <button class="absolute right-3 top-3 text-gray-400 hover:text-yellow-500">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="flex flex-wrap justify-center gap-2 mt-4">
+                    <button class="bg-white hover:bg-gray-200 px-3 py-1 rounded-full text-sm">Quick</button>
+                    <button class="bg-white hover:bg-gray-200 px-3 py-1 rounded-full text-sm">Vegetarian</button>
+                    <button class="bg-white hover:bg-gray-200 px-3 py-1 rounded-full text-sm">High-Protein</button>
+                    <button class="bg-white hover:bg-gray-200 px-3 py-1 rounded-full text-sm">Low-Carb</button>
+                    <button class="bg-white hover:bg-gray-200 px-3 py-1 rounded-full text-sm">Under 30 min</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recipe of the Week -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-6">Recipe of the Week</h2>
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 relative overflow-hidden">
+                        <img src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg" alt="Mediterranean Bowl" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 text-white">
+                            <div class="flex space-x-4">
+                                <span class="flex items-center">
+                                    <i class="fas fa-clock mr-1"></i>
+                                    <span>25 min</span>
+                                </span>
+                                <span class="flex items-center">
+                                    <i class="fas fa-utensils mr-1"></i>
+                                    <span>Easy</span>
+                                </span>
+                                <span class="flex items-center">
+                                    <i class="fas fa-fire mr-1"></i>
+                                    <span>420 kcal</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-6">
+                        <h3 class="text-2xl font-bold mb-2">Mediterranean Grain Bowl</h3>
+                        <p class="text-gray-600 mb-4">A nutritious and flavorful bowl packed with whole grains, fresh vegetables, and lean protein.</p>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold mb-2">Ingredients</h4>
+                            <ul class="grid grid-cols-2 gap-2">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
+                                    <span>1 cup quinoa</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
+                                    <span>1 cucumber</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
+                                    <span>1 cup cherry tomatoes</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
+                                    <span>1/2 red onion</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
+                                    <span>1/2 cup feta cheese</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
+                                    <span>2 tbsp olive oil</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
+                                    <span>1 lemon</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
+                                    <span>Fresh parsley</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <button class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-6 rounded-full transition duration-300 mr-3">
+                            View Full Recipe
+                        </button>
+                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-full transition duration-300">
+                            <i class="fas fa-shopping-cart mr-1"></i> Add to List
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Recipes -->
+    <section class="py-12 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-6">All Recipes</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Recipe 1 -->
+                <div class="recipe-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 hover:shadow-xl">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.pexels.com/photos/2097090/pexels-photo-2097090.jpeg" alt="Quinoa Salad" class="recipe-image w-full h-48 object-cover transition duration-500">
+                        <span class="absolute top-2 right-2 bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-bold">Quinoa Power Salad</h3>
+                            <span class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-clock mr-1"></i> 20 min
+                            </span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3">Protein-packed salad with quinoa, chickpeas, and fresh vegetables.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </span>
+                            <button class="text-yellow-500 hover:text-yellow-600">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipe 2 -->
+                <div class="recipe-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 hover:shadow-xl">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.pexels.com/photos/769969/pexels-photo-769969.jpeg" alt="Salmon" class="recipe-image w-full h-48 object-cover transition duration-500">
+                        <span class="absolute top-2 right-2 bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">High-Protein</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-bold">Lemon Garlic Salmon</h3>
+                            <span class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-clock mr-1"></i> 15 min
+                            </span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3">Simple baked salmon with lemon and garlic butter sauce.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                            <button class="text-yellow-500 hover:text-yellow-600">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipe 3 -->
+                <div class="recipe-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 hover:shadow-xl">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg" alt="Smoothie" class="recipe-image w-full h-48 object-cover transition duration-500">
+                        <span class="absolute top-2 right-2 bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">Vegan</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-bold">Berry Blast Smoothie</h3>
+                            <span class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-clock mr-1"></i> 5 min
+                            </span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3">Antioxidant-rich smoothie with mixed berries and banana.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                            <button class="text-yellow-500 hover:text-yellow-600">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipe 4 -->
+                <div class="recipe-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 hover:shadow-xl">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg" alt="Stir Fry" class="recipe-image w-full h-48 object-cover transition duration-500">
+                        <span class="absolute top-2 right-2 bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Vegetarian</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-bold">Vegetable Stir Fry</h3>
+                            <span class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-clock mr-1"></i> 25 min
+                            </span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3">Colorful mix of fresh vegetables with tofu in savory sauce.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </span>
+                            <button class="text-yellow-500 hover:text-yellow-600">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipe 5 -->
+                <div class="recipe-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 hover:shadow-xl">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg" alt="Meatballs" class="recipe-image w-full h-48 object-cover transition duration-500">
+                        <span class="absolute top-2 right-2 bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">High-Protein</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-bold">Turkey Meatballs</h3>
+                            <span class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-clock mr-1"></i> 30 min
+                            </span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3">Lean turkey meatballs with whole wheat pasta.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                            <button class="text-yellow-500 hover:text-yellow-600">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipe 6 -->
+                <div class="recipe-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 hover:shadow-xl">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.pexels.com/photos/1211887/pexels-photo-1211887.jpeg" alt="Buddha Bowl" class="recipe-image w-full h-48 object-cover transition duration-500">
+                        <span class="absolute top-2 right-2 bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">Vegan</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-bold">Rainbow Buddha Bowl</h3>
+                            <span class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-clock mr-1"></i> 20 min
+                            </span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3">Nutrient-dense bowl with grains, veggies, and tahini dressing.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </span>
+                            <button class="text-yellow-500 hover:text-yellow-600">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping List Generator -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-6">Shopping List Generator</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold mb-4">Add Ingredients</h3>
+                    <div class="flex mb-4">
+                        <input type="text" placeholder="Add an ingredient..." class="flex-grow px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        <button class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-4 py-2 rounded-r-md transition duration-300">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between p-2 bg-gray-50 rounded">
+                            <div class="flex items-center">
+                                <input type="checkbox" class="mr-2">
+                                <span>2 cups quinoa</span>
+                            </div>
+                            <button class="text-red-500 hover:text-red-600">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                        <div class="flex items-center justify-between p-2 bg-gray-50 rounded">
+                            <div class="flex items-center">
+                                <input type="checkbox" class="mr-2">
+                                <span>1 bunch kale</span>
+                            </div>
+                            <button class="text-red-500 hover:text-red-600">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                        <div class="flex items-center justify-between p-2 bg-gray-50 rounded">
+                            <div class="flex items-center">
+                                <input type="checkbox" class="mr-2">
+                                <span>1 lb chicken breast</span>
+                            </div>
+                            <button class="text-red-500 hover:text-red-600">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                        <div class="flex items-center justify-between p-2 bg-gray-50 rounded">
+                            <div class="flex items-center">
+                                <input type="checkbox" class="mr-2">
+                                <span>1 pint cherry tomatoes</span>
+                            </div>
+                            <button class="text-red-500 hover:text-red-600">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold mb-4">Your Shopping List</h3>
+                    <textarea class="shopping-list w-full h-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500" placeholder="Your list will appear here..."></textarea>
+                    <div class="mt-4 flex space-x-3">
+                        <button class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-4 rounded-md transition duration-300">
+                            <i class="fas fa-copy mr-1"></i> Copy
+                        </button>
+                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-md transition duration-300">
+                            <i class="fas fa-print mr-1"></i> Print
+                        </button>
+                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-md transition duration-300">
+                            <i class="fas fa-share-alt mr-1"></i> Share
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-2xl font-bold">FitLife</h3>
+                    <p class="text-gray-400">Your health companion</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 FitLife. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Shopping list functionality will be added here
+        document.addEventListener('DOMContentLoaded', function() {
+            // Will implement shopping list logic in next iteration
+        });
+    </script>
+</body>
+</html>
