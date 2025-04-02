@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Plans - FitLife</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .meal-hero {
+            background-image: url('https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+        .nutrition-label {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav class="bg-gray-800 text-white p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold">FitLife</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-yellow-400">Home</a>
+                <a href="workouts.html" class="hover:text-yellow-400">Workouts</a>
+                <a href="meals.html" class="text-yellow-400">Meal Plans</a>
+                <a href="recipes.html" class="hover:text-yellow-400">Recipes</a>
+                <a href="ebook.html" class="hover:text-yellow-400">E-Book</a>
+            </div>
+            <button class="md:hidden">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Meal Hero Section -->
+    <section class="meal-hero h-64 flex items-center justify-center text-white relative">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="text-center z-10 px-4">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4">Meal Plans</h1>
+            <p class="text-lg">Nutrition made simple</p>
+        </div>
+    </section>
+
+    <!-- Meal Plan Filters -->
+    <section class="py-8 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="bg-yellow-500 text-black px-4 py-2 rounded-full font-medium">All</button>
+                <button class="bg-white hover:bg-gray-200 px-4 py-2 rounded-full font-medium">Vegetarian</button>
+                <button class="bg-white hover:bg-gray-200 px-4 py-2 rounded-full font-medium">Keto</button>
+                <button class="bg-white hover:bg-gray-200 px-4 py-2 rounded-full font-medium">Vegan</button>
+                <button class="bg-white hover:bg-gray-200 px-4 py-2 rounded-full font-medium">Low-Carb</button>
+                <button class="bg-white hover:bg-gray-200 px-4 py-2 rounded-full font-medium">Mediterranean</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Weekly Meal Plan -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-6">Weekly Meal Plan</h2>
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="grid md:grid-cols-7 divide-x divide-gray-200">
+                    <!-- Monday -->
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold mb-2">Monday</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <img src="https://images.pexels.com/photos/1092730/pexels-photo-1092730.jpeg" alt="Breakfast" class="w-full h-24 object-cover rounded mb-1">
+                                <p class="text-sm font-medium">Greek Yogurt Bowl</p>
+                                <p class="text-xs text-gray-500">Breakfast</p>
+                            </div>
+                            <div>
+                                <img src="https://images.pexels.com/photos/2097090/pexels-photo-2097090.jpeg" alt="Lunch" class="w-full h-24 object-cover rounded mb-1">
+                                <p class="text-sm font-medium">Quinoa Salad</p>
+                                <p class="text-xs text-gray-500">Lunch</p>
+                            </div>
+                            <div>
+                                <img src="https://images.pexels.com/photos/769969/pexels-photo-769969.jpeg" alt="Dinner" class="w-full h-24 object-cover rounded mb-1">
+                                <p class="text-sm font-medium">Grilled Salmon</p>
+                                <p class="text-xs text-gray-500">Dinner</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tuesday -->
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold mb-2">Tuesday</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <img src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg" alt="Breakfast" class="w-full h-24 object-cover rounded mb-1">
+                                <p class="text-sm font-medium">Avocado Toast</p>
+                                <p class="text-xs text-gray-500">Breakfast</p>
+                            </div>
+                            <div>
+                                <img src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg" alt="Lunch" class="w-full h-24 object-cover rounded mb-1">
+                                <p class="text-sm font-medium">Chicken Wrap</p>
+                                <p class="text-xs text-gray-500">Lunch</p>
+                            </div>
+                            <div>
+                                <img src="https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg" alt="Dinner" class="w-full h-24 object-cover rounded mb-1">
+                                <p class="text-sm font-medium">Vegetable Stir Fry</p>
+                                <p class="text-xs text-gray-500">Dinner</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Wednesday to Sunday sections would follow same pattern -->
+                    <!-- Wednesday -->
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold mb-2">Wednesday</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <img src="https://images.pexels.com/photos/1351238/pexels-photo-1351238.jpeg" alt="Breakfast" class="w-full h-24 object-cover rounded mb-1">
+                                <p class="text-sm font-medium">Smoothie Bowl</p>
+                                <p class="text-xs text-gray-500">Breakfast</p>
+                            </div>
+                            <div>
+                                <img src="https://images.pexels.com/photos/1211887/pexels-photo-1211887.jpeg" alt="Lunch" class="w-full h-24 object-cover rounded mb-1">
+                                <p class="text-sm font-medium">Buddha Bowl</p>
+                                <p class="text-xs text-gray-500">Lunch</p>
+                            </div>
+                            <div>
+                                <img src="https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg" alt="Dinner" class="w-full h-24 object-cover rounded mb-1">
+                                <p class="text-sm font-medium">Turkey Meatballs</p>
+                                <p class="text-xs text-gray-500">Dinner</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Thursday -->
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold mb-2">Thursday</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <img src="https://images.pexels.com/photos/357573/pexels-photo-357573.jpeg" alt="Breakfast" class="w-full h-24 object-cover rounded mb-1">
+                                <p class="text-sm font-medium">Oatmeal</p>
+                                <p class="text-xs text-gray-500">Breakfast</p>
+                            </div>
+                            <div>
+                                <img src="https://images.pexels.com/photos/2097090/pexels-photo-2097090.jpeg" alt="Lunch" class="w-full h-24 object-cover rounded mb-1">
+                                <p class="text-sm font-medium">Quinoa Salad</p>
+                                <p class="text-xs text-gray-500">Lunch</p>
+                            </div>
+                            <div>
+                                <img src="https://images.pexels.com/photos/769969/pexels-photo-769969.jpeg" alt="Dinner" class="w-full h-24 object-cover rounded mb-1">
+                                <p class="text-sm font-medium">Grilled Salmon</p>
+                                <p class="text-xs text-gray-500">Dinner</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Friday -->
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold mb-2">Friday</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <img src="https://images.pexels.com/photos/1092730/pexels-photo-1092730.jpeg" alt="Breakfast" class="w-full h-24 object-cover rounded mb-1">
+                                <p class="text-sm font-medium">Greek Yogurt Bowl</p>
+                                <p class="text-xs text-gray-500">Breakfast</p>
+                            </div>
+                            <div>
+                                <img src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg" alt="Lunch" class="w-full h-24 object-cover rounded mb-1">
+                                <p class="text-sm font-medium">Chicken Wrap</p>
+                                <p class="text-xs text-gray-500">Lunch</p>
+                            </div>
+                            <div>
+                                <img src="https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg" alt="Dinner" class="w-full h-24 object-cover rounded mb-1">
+                                <p class="text-sm font-medium">Vegetable Stir Fry</p>
+                                <p class="text-xs text-gray-500">Dinner</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Saturday -->
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold mb-2">Saturday</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <img src="https://images.pexels.com/photos/1351238/pexels-photo-1351238.jpeg" alt="Breakfast" class="w-full h-24 object-cover rounded mb-1">
+                                <p class="text-sm font-medium">Smoothie Bowl</p>
+                                <p class="text-xs text-gray-500">Breakfast</p>
+                            </div>
+                            <div>
+                                <img src="https://images.pexels.com/photos/1211887/pexels-photo-1211887.jpeg" alt="Lunch" class="w-full h-24 object-cover rounded mb-1">
+                                <p class="text-sm font-medium">Buddha Bowl</p>
+                                <p class="text-xs text-gray-500">Lunch</p>
+                            </div>
+                            <div>
+                                <img src="https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg" alt="Dinner" class="w-full h-24 object-cover rounded mb-1">
+                                <p class="text-sm font-medium">Turkey Meatballs</p>
+                                <p class="text-xs text-gray-500">Dinner</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sunday -->
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold mb-2">Sunday</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <img src="https://images.pexels.com/photos/357573/pexels-photo-357573.jpeg" alt="Breakfast" class="w-full h-24 object-cover rounded mb-1">
+                                <p class="text-sm font-medium">Oatmeal</p>
+                                <p class="text-xs text-gray-500">Breakfast</p>
+                            </div>
+                            <div>
+                                <img src="https://images.pexels.com/photos/2097090/pexels-photo-2097090.jpeg" alt="Lunch" class="w-full h-24 object-cover rounded mb-1">
+                                <p class="text-sm font-medium">Quinoa Salad</p>
+                                <p class="text-xs text-gray-500">Lunch</p>
+                            </div>
+                            <div>
+                                <img src="https://images.pexels.com/photos/769969/pexels-photo-769969.jpeg" alt="Dinner" class="w-full h-24 object-cover rounded mb-1">
+                                <p class="text-sm font-medium">Grilled Salmon</p>
+                                <p class="text-xs text-gray-500">Dinner</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nutrition Calculator -->
+    <section class="py-12 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-6">Nutrition Calculator</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold mb-4">Calculate Your Needs</h3>
+                    <form>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 mb-2">Gender</label>
+                            <div class="flex space-x-4">
+                                <label class="inline-flex items-center">
+                                    <input type="radio" class="form-radio" name="gender" value="male" checked>
+                                    <span class="ml-2">Male</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" class="form-radio" name="gender" value="female">
+                                    <span class="ml-2">Female</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 mb-2">Age</label>
+                            <input type="number" class="w-full px-3 py-2 border border-gray-300 rounded-md" min="18" max="100" value="30">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 mb-2">Weight (kg)</label>
+                            <input type="number" class="w-full px-3 py-2 border border-gray-300 rounded-md" min="40" max="200" value="70">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 mb-2">Height (cm)</label>
+                            <input type="number" class="w-full px-3 py-2 border border-gray-300 rounded-md" min="140" max="220" value="175">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 mb-2">Activity Level</label>
+                            <select class="w-full px-3 py-2 border border-gray-300 rounded-md">
+                                <option>Sedentary</option>
+                                <option>Lightly Active</option>
+                                <option selected>Moderately Active</option>
+                                <option>Very Active</option>
+                                <option>Extremely Active</option>
+                            </select>
+                        </div>
+                        <button type="button" class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-6 rounded-full transition duration-300 w-full">Calculate</button>
+                    </form>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 nutrition-label">
+                    <h3 class="text-xl font-bold mb-4">Your Daily Nutrition</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Calories</span>
+                                <span class="font-bold">2,200 kcal</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-yellow-500 h-2.5 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Protein</span>
+                                <span class="font-bold">110g</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-green-500 h-2.5 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Carbs</span>
+                                <span class="font-bold">275g</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-500 h-2.5 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Fats</span>
+                                <span class="font-bold">73g</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-red-500 h-2.5 rounded-full" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <h4 class="font-bold mb-2">Macronutrient Ratio</h4>
+                        <div class="flex justify-between text-sm">
+                            <span>Protein: 20%</span>
+                            <span>Carbs: 50%</span>
+                            <span>Fats: 30%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meal Prep Tips -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-6">Meal Prep Tips</h2>
+            <div class="space-y-4">
+                <!-- Tip 1 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="accordion-toggle w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100">
+                        <span class="font-medium">Plan Your Meals in Advance</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content px-4">
+                        <div class="py-4 border-t border-gray-200">
+                            <p class="text-gray-600">Take time each week to plan your meals. This helps with grocery shopping and ensures you have all ingredients ready. Consider preparing meals that use similar ingredients to minimize waste.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tip 2 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="accordion-toggle w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100">
+                        <span class="font-medium">Batch Cooking Strategies</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content px-4">
+                        <div class="py-4 border-t border-gray-200">
+                            <p class="text-gray-600">Cook large portions of staple foods like grains, proteins, and roasted vegetables that can be mixed and matched throughout the week. Store them in separate containers to maintain freshness.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tip 3 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="accordion-toggle w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100">
+                        <span class="font-medium">Proper Storage Techniques</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content px-4">
+                        <div class="py-4 border-t border-gray-200">
+                            <p class="text-gray-600">Use airtight containers to keep food fresh longer. Store dressings and sauces separately to prevent sogginess. Label containers with dates to track freshness.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-2xl font-bold">FitLife</h3>
+                    <p class="text-gray-400">Your health companion</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 FitLife. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Accordion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const accordions = document.querySelectorAll('.accordion-toggle');
+            accordions.forEach(accordion => {
+                accordion.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('i');
+                    
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                        icon.style.transform = 'rotate(0deg)';
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
