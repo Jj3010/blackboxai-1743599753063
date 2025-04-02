@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitLife E-Book - Your Health Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .ebook-hero {
+            background-image: url('https://images.pexels.com/photos/34577/pexels-photo.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .chapter-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .pdf-container {
+            height: 600px;
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav class="bg-gray-800 text-white p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold">FitLife</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-yellow-400">Home</a>
+                <a href="workouts.html" class="hover:text-yellow-400">Workouts</a>
+                <a href="meals.html" class="hover:text-yellow-400">Meal Plans</a>
+                <a href="recipes.html" class="hover:text-yellow-400">Recipes</a>
+                <a href="ebook.html" class="text-yellow-400">E-Book</a>
+            </div>
+            <button class="md:hidden">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- E-Book Hero Section -->
+    <section class="ebook-hero h-64 flex items-center justify-center text-white relative">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="text-center z-10 px-4">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4">FitLife Guide</h1>
+            <p class="text-lg">Your complete health and fitness companion</p>
+        </div>
+    </section>
+
+    <!-- E-Book Download Section -->
+    <section class="py-12 bg-yellow-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden md:flex">
+                <div class="md:w-1/3 p-6 flex items-center justify-center bg-yellow-100">
+                    <img src="https://images.pexels.com/photos/256450/pexels-photo-256450.jpeg" alt="E-Book Cover" class="w-full h-auto object-cover rounded-lg shadow-md">
+                </div>
+                <div class="md:w-2/3 p-8">
+                    <h2 class="text-2xl font-bold mb-2">The Complete FitLife Guide</h2>
+                    <p class="text-gray-600 mb-4">Download our comprehensive e-book covering nutrition, workouts, and healthy lifestyle tips.</p>
+                    <div class="mb-6">
+                        <h3 class="font-bold mb-2">What's Inside:</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
+                                <span>12-week workout plans for all levels</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
+                                <span>100+ healthy recipes with nutrition info</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
+                                <span>Meal planning strategies</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
+                                <span>Mindset and motivation techniques</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-6 rounded-full inline-flex items-center transition duration-300">
+                            <i class="fas fa-download mr-2"></i> Download PDF
+                        </a>
+                        <a href="#preview" class="bg-white hover:bg-gray-100 border border-gray-300 text-gray-800 font-bold py-3 px-6 rounded-full inline-flex items-center transition duration-300">
+                            <i class="fas fa-book-open mr-2"></i> Preview Chapters
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PDF Preview Section -->
+    <section class="py-12" id="preview">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-6 text-center">E-Book Preview</h2>
+            <div class="pdf-container rounded-lg shadow-lg overflow-hidden mb-8">
+                <embed src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" type="application/pdf" width="100%" height="100%">
+            </div>
+            <div class="text-center">
+                <p class="text-gray-600 mb-4">This is a sample preview. Download the full e-book for complete content.</p>
+                <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-6 rounded-full inline-flex items-center transition duration-300">
+                    <i class="fas fa-download mr-2"></i> Download Full E-Book
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chapter Previews -->
+    <section class="py-12 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-8 text-center">Chapter Highlights</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Chapter 1 -->
+                <div class="chapter-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <img src="https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg" alt="Fitness Fundamentals" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded">Chapter 1</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Fitness Fundamentals</h3>
+                        <p class="text-gray-600 mb-4">Learn the basic principles of effective training and how to build a sustainable workout routine.</p>
+                        <a href="#" class="text-yellow-500 font-semibold hover:underline inline-flex items-center">
+                            Preview Chapter
+                            <i class="fas fa-chevron-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Chapter 2 -->
+                <div class="chapter-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <img src="https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg" alt="Nutrition Essentials" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded">Chapter 2</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Nutrition Essentials</h3>
+                        <p class="text-gray-600 mb-4">Understand macronutrients, portion control, and how to fuel your body for optimal performance.</p>
+                        <a href="#" class="text-yellow-500 font-semibold hover:underline inline-flex items-center">
+                            Preview Chapter
+                            <i class="fas fa-chevron-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Chapter 3 -->
+                <div class="chapter-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <img src="https://images.pexels.com/photos/38296/cycling-bike-ride-sport-38296.jpeg" alt="Home Workouts" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded">Chapter 3</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Home Workouts</h3>
+                        <p class="text-gray-600 mb-4">Effective exercises you can do anywhere with minimal or no equipment.</p>
+                        <a href="#" class="text-yellow-500 font-semibold hover:underline inline-flex items-center">
+                            Preview Chapter
+                            <i class="fas fa-chevron-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-8 text-center">What Readers Say</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img class="h-10 w-10 rounded-full" src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah J.">
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-sm font-medium text-gray-900">Sarah J.</p>
+                            <div class="flex text-yellow-500 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"The FitLife Guide completely transformed my approach to health. The meal plans are easy to follow and the workouts are effective!"</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img class="h-10 w-10 rounded-full" src="https://randomuser.me/api/portraits/men/45.jpg" alt="Michael T.">
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-sm font-medium text-gray-900">Michael T.</p>
+                            <div class="flex text-yellow-500 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"As a beginner, I found the explanations clear and the progression plans really helpful. Lost 15lbs in 3 months!"</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img class="h-10 w-10 rounded-full" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya K.">
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-sm font-medium text-gray-900">Priya K.</p>
+                            <div class="flex text-yellow-500 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"The vegetarian meal options are fantastic. I've never eaten so well while still seeing fitness results."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-12 bg-gray-800 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">Start Your Health Journey Today</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto">Download the complete FitLife Guide and get instant access to all chapters, workout plans, and recipes.</p>
+            <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-full inline-flex items-center transition duration-300 text-lg">
+                <i class="fas fa-download mr-2"></i> Download Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-2xl font-bold">FitLife</h3>
+                    <p class="text-gray-400">Your health companion</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-6 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 FitLife. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // PDF viewer controls would be implemented here
+        document.addEventListener('DOMContentLoaded', function() {
+            // Will add interactive elements in next iteration
+        });
+    </script>
+</body>
+</html>
